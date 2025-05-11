@@ -1,0 +1,27 @@
+{
+  "name": "aria-types-monorepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "turbo build",
+    "test": "turbo test",
+    "test:watch": "turbo test:watch",
+    "typecheck": "turbo typecheck",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "lint:fix": "turbo lint:fix"
+  },
+  "engines": {
+    "pnpm": "9.11.0",
+    "npm": "please use pnpm"
+  },
+  "packageManager": "pnpm@9.11.0",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "3.5.2",
+    "turbo": "^2.5.2"
+  }
+}
