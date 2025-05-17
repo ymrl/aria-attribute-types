@@ -1,4 +1,5 @@
 import { Element } from "./components/Element";
+import { Link } from "./components/Link";
 
 function App() {
   return (
@@ -23,6 +24,23 @@ function App() {
             aria-types
           </Element>
           .
+        </Element>
+        <Element role="paragraph" className="mt-4">
+          <Element
+            role="code"
+            className="inline font-mono bg-indigo-100 text-indigo-800 rounded p-0.5"
+          >
+            aria-types
+          </Element>{" "}
+          provides a set of TypeScript types for{" "}
+          <Link
+            href="https://www.w3.org/TR/wai-aria-1.2/"
+            target="_blank"
+            className="underline text-rose-800 hover:text-rose-900"
+          >
+            WAI-ARIA 1.2
+          </Link>{" "}
+          attributes and roles in kebab-case and CamelCase.
         </Element>
       </Element>
     </Element>
