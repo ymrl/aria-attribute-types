@@ -13,7 +13,7 @@ function App() {
           ariaLevel={1}
           className="text-4xl font-bold block"
         >
-          aria-types demo
+          aria-attribute-types demo
         </Element>
         <Element role="paragraph" className="mt-4">
           This site is demo page for{" "}
@@ -21,7 +21,7 @@ function App() {
             role="code"
             className="inline font-mono bg-indigo-100 text-indigo-800 rounded p-0.5"
           >
-            aria-types
+            aria-attribute-types
           </Element>
           .
         </Element>
@@ -30,7 +30,7 @@ function App() {
             role="code"
             className="inline font-mono bg-indigo-100 text-indigo-800 rounded p-0.5"
           >
-            aria-types
+            aria-attribute-types
           </Element>{" "}
           provides a set of TypeScript types for{" "}
           <Link

@@ -1,4 +1,4 @@
-# aria-types
+# aria-attribute-types
 
 Type-safe [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.2/) attributes for TypeScript.
 
@@ -6,7 +6,7 @@ Type-safe [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.2/) attributes for TypeScr
 
 This package provides type definitions for WAI-ARIA attributes in both camelCase and kebab-case, designed for use in TypeScript environments such as React or other JSX-based frameworks.
 
-In JSX, TypeScript does not perform type checking on unknown kebab-case attributes. As a result, typos in ARIA attributes can go unnoticed. To address this, aria-types offers:
+In JSX, TypeScript does not perform type checking on unknown kebab-case attributes. As a result, typos in ARIA attributes can go unnoticed. To address this, aria-attribute-types offers:
 
 - CamelCase ARIA props, such as `ariaLabel`, `ariaHidden`, etc., to enable full type checking in JSX.
 - A conversion utility to transform camelCase ARIA props into kebab-case (ariaLabel → aria-label) for rendering to HTML.
@@ -25,13 +25,13 @@ To use WAI-ARIA attributes correctly by correctly defining attribute types for e
 ## Usage
 
 ```tsx
-import { convertCamelizedAttributes } from "aria-types";
+import { convertCamelizedAttributes } from "aria-attribute-types";
 import type {
   // Types for `link` role
   CamelCaseLinkRoleAriaAttributes,
   // All ARIA attributes types classified by `role` attribute
   CamelCaseRoleAttributes,
-} from "aria-types";
+} from "aria-attribute-types";
 
 export const Link = ({
   children,

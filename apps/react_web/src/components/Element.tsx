@@ -1,6 +1,6 @@
-import { convertCamelizedAttributes } from "aria-types";
+import { convertCamelizedAttributes } from "aria-attribute-types";
 import type { ReactNode } from "react";
-import type { CamelCaseRoleAttributes } from "aria-types";
+import type { CamelCaseRoleAttributes } from "aria-attribute-types";
 
 export const Element = ({
   children,

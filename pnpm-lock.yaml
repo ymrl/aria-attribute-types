@@ -48,9 +48,9 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^4.4.1
         version: 4.4.1(vite@6.3.5(jiti@2.4.2)(lightningcss@1.30.1))
-      aria-types:
+      aria-attribute-types:
         specifier: workspace:^
-        version: link:../../packages/aria-types
+        version: link:../../packages/aria-attribute-types
       eslint:
         specifier: ^9.25.0
         version: 9.27.0(jiti@2.4.2)
@@ -85,7 +85,7 @@ importers:
         specifier: ^3.1.3
         version: 3.1.3(jiti@2.4.2)(jsdom@26.1.0)(lightningcss@1.30.1)
 
-  packages/aria-types:
+  packages/aria-attribute-types:
     devDependencies:
       '@eslint/js':
         specifier: ^9.25.0
