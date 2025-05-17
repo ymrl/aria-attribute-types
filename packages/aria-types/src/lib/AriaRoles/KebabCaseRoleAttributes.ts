@@ -1,10 +1,7 @@
-import { KebabCaseAriaAttributes } from "../AriaAttributes";
 import * as C from "../RoleAttributes";
 
 export type KebabCaseRoleAttributes =
-  | ({ role?: undefined } & {
-      [key in keyof KebabCaseAriaAttributes]?: undefined;
-    })
+  | { role: undefined }
   | ({ role: `${string} alert` | "alert" } & C.KebabCaseAlertRoleAriaAttributes)
   | ({
       role: `${string} alertdialog` | "alertdialog";

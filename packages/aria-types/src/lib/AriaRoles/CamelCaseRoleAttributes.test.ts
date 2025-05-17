@@ -3,13 +3,11 @@ import { CamelCaseRoleAttributes } from "./CamelCaseRoleAttributes";
 
 describe("CamelCaseRoleAttributes", () => {
   it("should not have any aria property without role", () => {
-    assertType<CamelCaseRoleAttributes>(
+    assertType<CamelCaseRoleAttributes>({
+      role: undefined,
       // @ts-expect-error undefined role should not have any aria property
-      {
-        role: undefined,
-        ariaLabel: "foobar",
-      },
-    );
+      ariaLabel: "foobar",
+    });
     assertType<CamelCaseRoleAttributes>(
       // @ts-expect-error undefined role should not have any aria property
       {
@@ -187,9 +185,9 @@ describe("CamelCaseRoleAttributes", () => {
       });
     });
     test("other aria properties", () => {
-      // @ts-expect-error aria-label is prohibited for caption role
       assertType<CamelCaseRoleAttributes>({
         role: "caption",
+        // @ts-expect-error aria-label is prohibited for caption role
         ariaLabel: "foobar",
       });
       assertType<CamelCaseRoleAttributes>({
@@ -377,9 +375,9 @@ describe("CamelCaseRoleAttributes", () => {
       });
     });
     test("other aria properties", () => {
-      // @ts-expect-error aria-label is prohibited for deletion role
       assertType<CamelCaseRoleAttributes>({
         role: "deletion",
+        // @ts-expect-error aria-label is prohibited for deletion role
         ariaLabel: "foobar",
       });
     });
@@ -458,9 +456,9 @@ describe("CamelCaseRoleAttributes", () => {
       });
     });
     test("other aria properties", () => {
-      // @ts-expect-error aria-label is prohibited for emphasis role
       assertType<CamelCaseRoleAttributes>({
         role: "emphasis",
+        // @ts-expect-error aria-label is prohibited for emphasis role
         ariaLabel: "foobar",
       });
     });
@@ -537,9 +535,9 @@ describe("CamelCaseRoleAttributes", () => {
       });
     });
     test("other aria properties", () => {
-      // @ts-expect-error aria-label is prohibited for generic role
       assertType<CamelCaseRoleAttributes>({
         role: "generic",
+        // @ts-expect-error aria-label is prohibited for generic role
         ariaLabel: "foobar",
       });
     });
@@ -664,9 +662,9 @@ describe("CamelCaseRoleAttributes", () => {
       });
     });
     test("other aria properties", () => {
-      // @ts-expect-error aria-label is prohibited for insertion role
       assertType<CamelCaseRoleAttributes>({
         role: "insertion",
+        // @ts-expect-error aria-label is prohibited for insertion role
         ariaLabel: "foobar",
       });
     });
@@ -993,9 +991,9 @@ describe("CamelCaseRoleAttributes", () => {
       });
     });
     test("other aria properties", () => {
-      // @ts-expect-error aria-label is prohibited for none role
       assertType<CamelCaseRoleAttributes>({
         role: "none",
+        // @ts-expect-error aria-label is prohibited for none role
         ariaLabel: "foobar",
       });
     });
@@ -1055,9 +1053,9 @@ describe("CamelCaseRoleAttributes", () => {
       });
     });
     test("other aria properties", () => {
-      // @ts-expect-error aria-label is prohibited for paragraph role
       assertType<CamelCaseRoleAttributes>({
         role: "paragraph",
+        // @ts-expect-error aria-label is prohibited for paragraph role
         ariaLabel: "foobar",
       });
     });
@@ -1075,9 +1073,9 @@ describe("CamelCaseRoleAttributes", () => {
       });
     });
     test("other aria properties", () => {
-      // @ts-expect-error aria-label is prohibited for presentation role
       assertType<CamelCaseRoleAttributes>({
         role: "presentation",
+        // @ts-expect-error aria-label is prohibited for presentation role
         ariaLabel: "foobar",
       });
     });
@@ -1375,9 +1373,9 @@ describe("CamelCaseRoleAttributes", () => {
       });
     });
     test("other aria properties", () => {
-      // @ts-expect-error aria-label is prohibited for strong role
       assertType<CamelCaseRoleAttributes>({
         role: "strong",
+        // @ts-expect-error aria-label is prohibited for strong role
         ariaLabel: "foobar",
       });
     });
@@ -1394,9 +1392,9 @@ describe("CamelCaseRoleAttributes", () => {
       });
     });
     test("other aria properties", () => {
-      // @ts-expect-error aria-label is prohibited for subscript role
       assertType<CamelCaseRoleAttributes>({
         role: "subscript",
+        // @ts-expect-error aria-label is prohibited for subscript role
         ariaLabel: "foobar",
       });
     });
@@ -1414,9 +1412,9 @@ describe("CamelCaseRoleAttributes", () => {
       });
     });
     test("other aria properties", () => {
-      // @ts-expect-error aria-label is prohibited for superscript role
       assertType<CamelCaseRoleAttributes>({
         role: "superscript",
+        // @ts-expect-error aria-label is prohibited for superscript role
         ariaLabel: "foobar",
       });
     });

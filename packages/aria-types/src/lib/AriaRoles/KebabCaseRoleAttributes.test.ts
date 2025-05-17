@@ -3,13 +3,11 @@ import { KebabCaseRoleAttributes } from "./KebabCaseRoleAttributes";
 
 describe("KebabCaseRoleAttributes", () => {
   it("should not have any aria property without role", () => {
-    assertType<KebabCaseRoleAttributes>(
+    assertType<KebabCaseRoleAttributes>({
+      role: undefined,
       // @ts-expect-error undefined role should not have any aria property
-      {
-        role: undefined,
-        "aria-label": "foobar",
-      },
-    );
+      "aria-label": "foobar",
+    });
     assertType<KebabCaseRoleAttributes>(
       // @ts-expect-error undefined role should not have any aria property
       {
@@ -187,9 +185,9 @@ describe("KebabCaseRoleAttributes", () => {
       });
     });
     test("other aria properties", () => {
-      // @ts-expect-error aria-label is prohibited for caption role
       assertType<KebabCaseRoleAttributes>({
         role: "caption",
+        // @ts-expect-error aria-label is prohibited for caption role
         "aria-label": "foobar",
       });
       assertType<KebabCaseRoleAttributes>({
@@ -377,9 +375,9 @@ describe("KebabCaseRoleAttributes", () => {
       });
     });
     test("other aria properties", () => {
-      // @ts-expect-error aria-label is prohibited for deletion role
       assertType<KebabCaseRoleAttributes>({
         role: "deletion",
+        // @ts-expect-error aria-label is prohibited for deletion role
         "aria-label": "foobar",
       });
     });
@@ -458,9 +456,9 @@ describe("KebabCaseRoleAttributes", () => {
       });
     });
     test("other aria properties", () => {
-      // @ts-expect-error aria-label is prohibited for emphasis role
       assertType<KebabCaseRoleAttributes>({
         role: "emphasis",
+        // @ts-expect-error aria-label is prohibited for emphasis role
         "aria-label": "foobar",
       });
     });
@@ -537,9 +535,9 @@ describe("KebabCaseRoleAttributes", () => {
       });
     });
     test("other aria properties", () => {
-      // @ts-expect-error aria-label is prohibited for generic role
       assertType<KebabCaseRoleAttributes>({
         role: "generic",
+        // @ts-expect-error aria-label is prohibited for generic role
         "aria-label": "foobar",
       });
     });
@@ -664,9 +662,9 @@ describe("KebabCaseRoleAttributes", () => {
       });
     });
     test("other aria properties", () => {
-      // @ts-expect-error aria-label is prohibited for insertion role
       assertType<KebabCaseRoleAttributes>({
         role: "insertion",
+        // @ts-expect-error aria-label is prohibited for insertion role
         "aria-label": "foobar",
       });
     });
@@ -993,9 +991,9 @@ describe("KebabCaseRoleAttributes", () => {
       });
     });
     test("other aria properties", () => {
-      // @ts-expect-error aria-label is prohibited for none role
       assertType<KebabCaseRoleAttributes>({
         role: "none",
+        // @ts-expect-error aria-label is prohibited for none role
         "aria-label": "foobar",
       });
     });
@@ -1055,9 +1053,9 @@ describe("KebabCaseRoleAttributes", () => {
       });
     });
     test("other aria properties", () => {
-      // @ts-expect-error aria-label is prohibited for paragraph role
       assertType<KebabCaseRoleAttributes>({
         role: "paragraph",
+        // @ts-expect-error aria-label is prohibited for paragraph role
         "aria-label": "foobar",
       });
     });
@@ -1075,9 +1073,9 @@ describe("KebabCaseRoleAttributes", () => {
       });
     });
     test("other aria properties", () => {
-      // @ts-expect-error aria-label is prohibited for presentation role
       assertType<KebabCaseRoleAttributes>({
         role: "presentation",
+        // @ts-expect-error aria-label is prohibited for presentation role
         "aria-label": "foobar",
       });
     });
@@ -1375,9 +1373,9 @@ describe("KebabCaseRoleAttributes", () => {
       });
     });
     test("other aria properties", () => {
-      // @ts-expect-error aria-label is prohibited for strong role
       assertType<KebabCaseRoleAttributes>({
         role: "strong",
+        // @ts-expect-error aria-label is prohibited for strong role
         "aria-label": "foobar",
       });
     });
@@ -1394,9 +1392,9 @@ describe("KebabCaseRoleAttributes", () => {
       });
     });
     test("other aria properties", () => {
-      // @ts-expect-error aria-label is prohibited for subscript role
       assertType<KebabCaseRoleAttributes>({
         role: "subscript",
+        // @ts-expect-error aria-label is prohibited for subscript role
         "aria-label": "foobar",
       });
     });
@@ -1414,9 +1412,9 @@ describe("KebabCaseRoleAttributes", () => {
       });
     });
     test("other aria properties", () => {
-      // @ts-expect-error aria-label is prohibited for superscript role
       assertType<KebabCaseRoleAttributes>({
         role: "superscript",
+        // @ts-expect-error aria-label is prohibited for superscript role
         "aria-label": "foobar",
       });
     });

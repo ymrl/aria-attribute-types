@@ -1,10 +1,7 @@
-import { CamelCaseAriaAttributes } from "../AriaAttributes";
 import * as C from "../RoleAttributes";
 
 export type CamelCaseRoleAttributes =
-  | ({ role?: undefined } & {
-      [key in keyof CamelCaseAriaAttributes]?: undefined;
-    })
+  | { role: undefined }
   | ({ role: `${string} alert` | "alert" } & C.CamelCaseAlertRoleAriaAttributes)
   | ({
       role: `${string} alertdialog` | "alertdialog";

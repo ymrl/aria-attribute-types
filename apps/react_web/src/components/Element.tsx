@@ -8,14 +8,6 @@ export const Element = ({
 }: {
   children?: ReactNode;
   className?: string;
-} & CamelCaseRoleAttributes) => {
-  return (
-    <div
-      {...convertCamelizedAttributes<string | number | boolean | undefined>(
-        props,
-      )}
-    >
-      {children}
-    </div>
-  );
+} & (CamelCaseRoleAttributes | { role?: undefined })) => {
+  return <div {...convertCamelizedAttributes(props)}>{children}</div>;
 };

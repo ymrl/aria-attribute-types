@@ -14,13 +14,5 @@ export const Link = ({
   target?: string;
   className?: string;
 } & (CamelCaseLinkRoleAriaAttributes | CamelCaseRoleAttributes)) => {
-  return (
-    <a
-      {...convertCamelizedAttributes<string | number | boolean | undefined>(
-        props,
-      )}
-    >
-      {children}
-    </a>
-  );
+  return <a {...convertCamelizedAttributes(props)}>{children}</a>;
 };
