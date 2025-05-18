@@ -34,7 +34,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: apps/react_web/dist
+          path: "./apps/react_web/dist"
 
   deploy:
     needs: build
