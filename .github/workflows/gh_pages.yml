@@ -5,13 +5,18 @@ on:
     branches:
       - main
 
+concurrency:
+  group: pages
+  cancel-in-progress: false
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
       - name: Install pnpm
         uses: pnpm/action-setup@v2
@@ -31,7 +36,7 @@ jobs:
       - name: Build project
         run: pnpm build
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-pages-artifact@v3
         with:
           name: github-pages
           path: "./apps/react_web/dist"
