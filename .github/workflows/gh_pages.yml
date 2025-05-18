@@ -33,7 +33,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: react_web
+          name: github-pages
           path: apps/react_web/dist
 
   deploy:
