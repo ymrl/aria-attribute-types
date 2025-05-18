@@ -13,10 +13,10 @@
     "lint:fix": "turbo lint:fix"
   },
   "engines": {
-    "pnpm": "9.11.0",
+    "pnpm": "10.x",
     "npm": "please use pnpm"
   },
-  "packageManager": "pnpm@9.11.0",
+  "packageManager": "pnpm@10.11.0",
   "keywords": [],
   "author": "",
   "license": "ISC",
