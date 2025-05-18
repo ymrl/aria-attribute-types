@@ -10,7 +10,8 @@
     "typecheck": "turbo typecheck",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "lint:fix": "turbo lint:fix"
+    "lint:fix": "turbo lint:fix",
+    "clean": "turbo clean"
   },
   "engines": {
     "pnpm": "10.x",
