@@ -13,6 +13,7 @@
       "inputs": ["src/**"]
     },
     "typecheck": {
+      "dependsOn": ["build"],
       "inputs": ["src/**"]
     },
     "lint": {
