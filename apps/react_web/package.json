@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "clean": "rm -rf dist",
     "lint": "prettier . --check && eslint .",
     "lint:fix": "prettier . --write && eslint . --fix",
     "test": "vitest --run",
+    "typecheck": "vitest --typecheck --run",
     "test:watch": "vitest",
     "preview": "vite preview"
   },

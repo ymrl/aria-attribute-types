@@ -5,8 +5,11 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
     },
+    "clean": {
+      "outputs": ["dist/**"]
+    },
     "test": {
-      "dependsOn": ["typecheck"],
+      "dependsOn": ["build", "typecheck"],
       "inputs": ["src/**"]
     },
     "typecheck": {
