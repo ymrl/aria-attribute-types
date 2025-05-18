@@ -14,12 +14,10 @@ In JSX, TypeScript does not perform type checking on unknown kebab-case attribut
 
 This helps developers write more accessible, robust code with confidence and better editor support.
 
-
-
-This package provides TypeScript types for the [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.2/) specification. 
+This package provides TypeScript types for the [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.2/) specification.
 It includes types for ARIA roles, properties, and states, as well as utility functions for converting between camelCase and kebab-case attribute names.
 
-It aims to complement JSX's insufficient support for aria-* attributes. 
+It aims to complement JSX's insufficient support for aria-\* attributes.
 To use WAI-ARIA attributes correctly by correctly defining attribute types for each role using camel case instead of kebab case which would allow undefined attributes.
 
 ## Usage
@@ -53,5 +51,3 @@ export const Link = ({
   );
 };
 ```
-
-
