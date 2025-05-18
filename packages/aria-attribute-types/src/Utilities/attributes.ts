@@ -3,8 +3,5 @@ export type KebabAria<T> = {
 };
 
 export type CamelAria<T> = {
-  [suffix in Extract<
-    keyof T,
-    string
-  > as `aria${Capitalize<suffix>}`]?: T[suffix];
+  [body in Extract<keyof T, string> as `aria${Capitalize<body>}`]?: T[body];
 };
