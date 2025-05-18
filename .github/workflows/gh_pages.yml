@@ -31,7 +31,7 @@ jobs:
       - name: Build project
         run: pnpm build
 
-      - uses: actions-upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
           name: react_web
           path: apps/react_web/dist
