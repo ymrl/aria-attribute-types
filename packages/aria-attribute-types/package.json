@@ -13,6 +13,8 @@
     "dev": "tsc --watch",
     "clean": "rm -rf dist"
   },
+  "main": "dist/lib/index.js",
+  "types": "dist/lib/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/lib/index.js",
@@ -20,7 +22,8 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "keywords": [],
   "author": "",
