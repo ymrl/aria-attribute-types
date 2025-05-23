@@ -1,7 +1,12 @@
 {
   "name": "aria-attribute-types",
   "version": "0.0.1",
-  "description": "",
+  "description": "Type-safe WAI-ARIA attributes for TypeScript.",
+  "homepage": "https://github.com/ymrl/aria-attribute-types",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ymrl/aria-attribute-types.git"
+  },
   "scripts": {
     "test:watch": "vitest",
     "test": "vitest --run",
@@ -25,8 +30,13 @@
     "dist",
     "src"
   ],
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "aria",
+    "wai-aria",
+    "typescript",
+    "accessibility"
+  ],
+  "author": "ymrl",
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^9.25.0",
