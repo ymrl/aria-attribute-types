@@ -145,7 +145,15 @@ describe("CheckboxRoleAriaAttributeBodies", () => {
 
 describe("CodeRoleAriaAttributeBodies", () => {
   test("global attributes", () => {
+    // @ts-expect-error label and labelledBy are not allowed
     assertType<B.CodeRoleAriaAttributeBodies>(globalAttributes);
+  });
+  test("global attributes without label and labelledBy", () => {
+    assertType<B.CodeRoleAriaAttributeBodies>({
+      ...globalAttributes,
+      label: undefined,
+      labelledBy: undefined,
+    });
   });
 });
 

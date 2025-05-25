@@ -150,7 +150,16 @@ describe("CheckboxRoleAriaAttributes", () => {
 
 describe("CodeRoleAriaAttributes", () => {
   test("global attributes", () => {
+    // @ts-expect-error aria-label and aria-labelledby are not allowed
     assertType<K.KebabCaseCodeRoleAriaAttributes>(globalAttributes);
+  });
+
+  test("global attributes without aria-label and aria-labelledby", () => {
+    assertType<K.KebabCaseCodeRoleAriaAttributes>({
+      ...globalAttributes,
+      "aria-label": undefined,
+      "aria-labelledby": undefined,
+    });
   });
 });
 
