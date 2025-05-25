@@ -241,17 +241,22 @@ describe("CamelCaseRoleAttributes", () => {
     it("should have code role, and aria properties", () => {
       assertType<CamelCaseRoleAttributes>({
         role: "code",
-        ariaLabel: "foobar",
+        ariaAtomic: "true",
       });
       assertType<CamelCaseRoleAttributes>({
         role: "awesome code",
-        ariaLabel: "foobar",
+        ariaAtomic: "true",
       });
     });
     test("other aria properties", () => {
       assertType<CamelCaseRoleAttributes>({
         role: "code",
+        ariaAtomic: "true",
+        // @ts-expect-error aria-label is prohibited for code role
         ariaLabel: "foobar",
+      });
+      assertType<CamelCaseRoleAttributes>({
+        role: "code",
         // @ts-expect-error aria-activedescendant is not a valid aria property for code role
         ariaActiveDescendant: "foobar",
       });

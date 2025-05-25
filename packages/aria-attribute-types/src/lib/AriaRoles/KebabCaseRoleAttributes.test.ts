@@ -241,17 +241,21 @@ describe("KebabCaseRoleAttributes", () => {
     it("should have code role, and aria properties", () => {
       assertType<KebabCaseRoleAttributes>({
         role: "code",
-        "aria-label": "foobar",
+        "aria-atomic": "true",
       });
       assertType<KebabCaseRoleAttributes>({
         role: "awesome code",
-        "aria-label": "foobar",
+        "aria-atomic": "true",
       });
     });
     test("other aria properties", () => {
       assertType<KebabCaseRoleAttributes>({
         role: "code",
+        // @ts-expect-error aria-label is prohibited for code role
         "aria-label": "foobar",
+      });
+      assertType<KebabCaseRoleAttributes>({
+        role: "code",
         // @ts-expect-error aria-activedescendant is not a valid aria property for code role
         "aria-activedescendant": "foobar",
       });

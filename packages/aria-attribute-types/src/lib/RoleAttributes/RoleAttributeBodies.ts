@@ -109,7 +109,13 @@ export type CheckboxRoleAriaAttributeBodies = InputRoleAriaAttributeBodies &
 
 // code role
 // Superclass role: section
-export type CodeRoleAriaAttributeBodies = SectionRoleAriaAttributeBodies;
+export type CodeRoleAriaAttributeBodies = Omit<
+  SectionRoleAriaAttributeBodies,
+  "label" | "labelledBy"
+> & {
+  label?: undefined;
+  labelledBy?: undefined;
+};
 
 // columnheader role
 // Superclass role: cell, gridcell, sectionhead
