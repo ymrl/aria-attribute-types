@@ -1,9 +1,7 @@
-export const convertCamelizedAttributes = <
-  T = string | number | boolean | undefined,
->(
-  props: Record<string, T>,
-): Record<string, T> => {
-  return Object.keys(props).reduce<Record<string, T>>((acc, key) => {
+export const convertCamelizedAttributes = (props: {
+  [key: string]: unknown;
+}): Record<string, unknown> => {
+  return Object.keys(props).reduce((acc, key) => {
     if (key.startsWith("aria")) {
       const matched = key.match(/aria([A-Z][A-Za-z]+)/);
       if (matched) {

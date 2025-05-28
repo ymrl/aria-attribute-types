@@ -1,8 +1,8 @@
 import { describe, test, assertType } from "vitest";
 import * as B from "./RoleAttributeBodies";
-import { AriaAttributeBodies } from "../AriaAttributes";
+import { AllAriaAttributeBodies } from "./AllAriaAttributeBodies";
 
-const globalAttributes: AriaAttributeBodies = {
+const globalAttributes: AllAriaAttributeBodies = {
   atomic: true,
   busy: true,
   controls: "string",

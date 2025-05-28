@@ -1,0 +1,57 @@
+import { describe, test, assertType } from "vitest";
+import { AllCamelCaseAriaAttributes } from "./AllCamelCaseAriaAttributes";
+
+describe("CamelCaseAriaAttributes", () => {
+  test("attributes", () => {
+    assertType<AllCamelCaseAriaAttributes>({
+      ariaActiveDescendant: "string",
+      ariaAtomic: true,
+      ariaAutoComplete: "none",
+      ariaBusy: true,
+      ariaChecked: "mixed",
+      ariaColCount: 1,
+      ariaColIndex: 1,
+      ariaColSpan: 1,
+      ariaControls: "string",
+      ariaCurrent: "page",
+      ariaDescribedBy: "string",
+      ariaDetails: "string",
+      ariaDisabled: true,
+      ariaDropEffect: "copy",
+      ariaErrorMessage: "string",
+      ariaExpanded: true,
+      ariaFlowTo: "string",
+      ariaGrabbed: true,
+      ariaHasPopup: "menu",
+      ariaHidden: true,
+      ariaInvalid: true,
+      ariaKeyShortcuts: "string",
+      ariaLabel: "string",
+      ariaLabelledBy: "string",
+      ariaLevel: 1,
+      ariaLive: "off",
+      ariaModal: true,
+      ariaMultiLine: true,
+      ariaMultiSelectable: true,
+      ariaOrientation: "horizontal",
+      ariaOwns: "string",
+      ariaPlaceholder: "string",
+      ariaPosInSet: 1,
+      ariaPressed: true,
+      ariaReadOnly: true,
+      ariaRelevant: "additions removals text", // this is the one we are testing
+      ariaRequired: true,
+      ariaRoleDescription: "string",
+      ariaRowCount: 1,
+      ariaRowIndex: 1,
+      ariaRowSpan: 1,
+      ariaSelected: true,
+      ariaSetSize: 1,
+      ariaSort: "ascending",
+      ariaValueMax: 1,
+      ariaValueMin: 1,
+      ariaValueNow: 1,
+      ariaValueText: "string",
+    });
+  });
+});

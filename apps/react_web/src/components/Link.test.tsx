@@ -1,5 +1,5 @@
 import "@testing-library/jest-dom";
-import { describe, test, expect } from "vitest";
+import { describe, test, expect, assertType } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { Link } from "./Link";
 
@@ -44,5 +44,44 @@ describe("Link", () => {
     expect(link).toHaveAttribute("href", "/");
     expect(link).toHaveAttribute("aria-label", "Click me");
     expect(link).toHaveAttribute("aria-pressed", "true");
+  });
+
+  test("types", () => {
+    assertType<ReturnType<typeof Link>>(
+      <Link href="/" target="_blank" className="text-xl">
+        Click me
+      </Link>,
+    );
+    assertType<ReturnType<typeof Link>>(
+      <Link href="/" ariaLabel="Click me" ariaCurrent="page">
+        Click me
+      </Link>,
+    );
+    assertType<ReturnType<typeof Link>>(
+      <Link
+        href="/"
+        ariaLabel="Click me"
+        // @ts-expect-error - ariaPressed is not a valid attribute for role="link"
+        ariaPressed="true"
+      >
+        Click me
+      </Link>,
+    );
+    assertType<ReturnType<typeof Link>>(
+      <Link
+        href="/"
+        ariaLabel="Click me"
+        role="link"
+        // @ts-expect-error - ariaPressed is not a valid attribute for role="link"
+        ariaPressed="true"
+      >
+        Click me
+      </Link>,
+    );
+    assertType<ReturnType<typeof Link>>(
+      <Link href="/" role="button" ariaLabel="Click me" ariaPressed="true">
+        Click me
+      </Link>,
+    );
   });
 });
