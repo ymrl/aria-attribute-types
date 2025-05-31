@@ -1,5 +1,11 @@
 # aria-attribute-types
 
+## 0.0.5
+
+### Patch Changes
+
+- [#11](https://github.com/ymrl/aria-attribute-types/pull/11) [`29732b8`](https://github.com/ymrl/aria-attribute-types/commit/29732b869c80e27f57595528a9e1ed691a8a6d82) Thanks [@ymrl](https://github.com/ymrl)! - Fix `code` role not to have aria-label and aria-labelledby
+
 ## 0.0.4
 
 ### Patch Changes
