@@ -1,7 +1,7 @@
-import { AriaAttributeBodies } from "../AriaAttributes";
+import { AllAriaAttributeBodies } from "./AllAriaAttributeBodies";
 
 type RoletypeRoleAriaAttributeBodies = Pick<
-  AriaAttributeBodies,
+  AllAriaAttributeBodies,
   | "atomic"
   | "busy"
   | "controls"
@@ -36,7 +36,7 @@ type WidgetRoleAriaAttributeBodies = RoletypeRoleAriaAttributeBodies;
 // window role
 // Superclass role: widget
 type WindowRoleAriaAttributeBodies = RoletypeRoleAriaAttributeBodies &
-  Pick<AriaAttributeBodies, "modal">;
+  Pick<AllAriaAttributeBodies, "modal">;
 
 // alert role
 // Superclass role: section
@@ -52,7 +52,7 @@ export type AlertdialogRoleAriaAttributeBodies = AlertRoleAriaAttributeBodies &
 export type ApplicationRoleAriaAttributeBodies =
   StructureRoleAriaAttributeBodies &
     Pick<
-      AriaAttributeBodies,
+      AllAriaAttributeBodies,
       | "activeDescendant"
       | "disabled"
       | "errorMessage"
@@ -64,7 +64,7 @@ export type ApplicationRoleAriaAttributeBodies =
 // article role
 // Superclass role: document
 export type ArticleRoleAriaAttributeBodies = DocumentRoleAriaAttributeBodies &
-  Pick<AriaAttributeBodies, "posInSet" | "setSize">;
+  Pick<AllAriaAttributeBodies, "posInSet" | "setSize">;
 
 // banner role
 // Superclass role: landmark
@@ -77,7 +77,10 @@ export type BlockquoteRoleAriaAttributeBodies = SectionRoleAriaAttributeBodies;
 // button role
 // Superclass role: command
 export type ButtonRoleAriaAttributeBodies = CommandRoleAriaAttributeBodies &
-  Pick<AriaAttributeBodies, "disabled" | "hasPopup" | "expanded" | "pressed">;
+  Pick<
+    AllAriaAttributeBodies,
+    "disabled" | "hasPopup" | "expanded" | "pressed"
+  >;
 
 // caption role
 // Superclass role: section
@@ -92,13 +95,13 @@ export type CaptionRoleAriaAttributeBodies = Omit<
 // cell role
 // Superclass role: section
 export type CellRoleAriaAttributeBodies = SectionRoleAriaAttributeBodies &
-  Pick<AriaAttributeBodies, "colIndex" | "colSpan" | "rowIndex" | "rowSpan">;
+  Pick<AllAriaAttributeBodies, "colIndex" | "colSpan" | "rowIndex" | "rowSpan">;
 
 // checkbox role
 // Superclass role: input
 export type CheckboxRoleAriaAttributeBodies = InputRoleAriaAttributeBodies &
   Pick<
-    AriaAttributeBodies,
+    AllAriaAttributeBodies,
     | "checked" // required
     | "errorMessage"
     | "expanded"
@@ -122,12 +125,12 @@ export type CodeRoleAriaAttributeBodies = Omit<
 export type ColumnheaderRoleAriaAttributeBodies = CellRoleAriaAttributeBodies &
   GridcellRoleAriaAttributeBodies &
   SectionheadRoleAriaAttributeBodies &
-  Pick<AriaAttributeBodies, "sort">;
+  Pick<AllAriaAttributeBodies, "sort">;
 
 // Superclass role: section
 export type ComboboxRoleAriaAttributeBodies = InputRoleAriaAttributeBodies &
   Pick<
-    AriaAttributeBodies,
+    AllAriaAttributeBodies,
     | "controls"
     | "expanded"
     | "activeDescendant"
@@ -150,7 +153,7 @@ export type ComplementaryRoleAriaAttributeBodies =
 // Superclass role: widget
 // abstract role
 type CompositeRoleAriaAttributeBodies = WidgetRoleAriaAttributeBodies &
-  Pick<AriaAttributeBodies, "activeDescendant" | "disabled">;
+  Pick<AllAriaAttributeBodies, "activeDescendant" | "disabled">;
 
 // Superclass role: landmark
 export type ContentinfoRoleAriaAttributeBodies =
@@ -221,14 +224,14 @@ export type GenericRoleAriaAttributeBodies = Omit<
 // Superclass role: composite, table
 export type GridRoleAriaAttributeBodies = CompositeRoleAriaAttributeBodies &
   TableRoleAriaAttributeBodies &
-  Pick<AriaAttributeBodies, "multiSelectable" | "readOnly">;
+  Pick<AllAriaAttributeBodies, "multiSelectable" | "readOnly">;
 
 // gridcell role
 // Superclass role: cell, widget
 export type GridcellRoleAriaAttributeBodies = CellRoleAriaAttributeBodies &
   WidgetRoleAriaAttributeBodies &
   Pick<
-    AriaAttributeBodies,
+    AllAriaAttributeBodies,
     | "disabled"
     | "errorMessage"
     | "expanded"
@@ -242,12 +245,12 @@ export type GridcellRoleAriaAttributeBodies = CellRoleAriaAttributeBodies &
 // group role
 // Superclass role: section
 export type GroupRoleAriaAttributeBodies = SectionRoleAriaAttributeBodies &
-  Pick<AriaAttributeBodies, "activeDescendant" | "disabled">;
+  Pick<AllAriaAttributeBodies, "activeDescendant" | "disabled">;
 
 // heading role
 // Superclass role: section
 export type HeadingRoleAriaAttributeBodies = SectionRoleAriaAttributeBodies &
-  Pick<AriaAttributeBodies, "level">;
+  Pick<AllAriaAttributeBodies, "level">;
 
 // img role
 // Superclass role: section
@@ -257,7 +260,7 @@ export type ImgRoleAriaAttributeBodies = SectionRoleAriaAttributeBodies;
 // Superclass role: widget
 // abstract role
 type InputRoleAriaAttributeBodies = WidgetRoleAriaAttributeBodies &
-  Pick<AriaAttributeBodies, "disabled">;
+  Pick<AllAriaAttributeBodies, "disabled">;
 
 // insertion role
 // Superclass role: section
@@ -277,7 +280,7 @@ type LandmarkRoleAriaAttributeBodies = SectionRoleAriaAttributeBodies;
 // link role
 // Superclass role: command
 export type LinkRoleAriaAttributeBodies = CommandRoleAriaAttributeBodies &
-  Pick<AriaAttributeBodies, "disabled" | "expanded" | "hasPopup">;
+  Pick<AllAriaAttributeBodies, "disabled" | "expanded" | "hasPopup">;
 
 // list role
 // Superclass role: section
@@ -287,7 +290,7 @@ export type ListRoleAriaAttributeBodies = SectionRoleAriaAttributeBodies;
 // Superclass role: select
 export type ListboxRoleAriaAttributeBodies = SelectRoleAriaAttributeBodies &
   Pick<
-    AriaAttributeBodies,
+    AllAriaAttributeBodies,
     | "errorMessage"
     | "expanded"
     | "invalid"
@@ -299,7 +302,7 @@ export type ListboxRoleAriaAttributeBodies = SelectRoleAriaAttributeBodies &
 // listitem role
 // Superclass role: section
 export type ListitemRoleAriaAttributeBodies = SectionRoleAriaAttributeBodies &
-  Pick<AriaAttributeBodies, "level" | "posInSet" | "setSize">;
+  Pick<AllAriaAttributeBodies, "level" | "posInSet" | "setSize">;
 
 //log role
 // Superclass role: section
@@ -333,7 +336,7 @@ export type MenubarRoleAriaAttributeBodies = MenuRoleAriaAttributeBodies;
 // Superclass role: command
 export type MenuitemRoleAriaAttributeBodies = CommandRoleAriaAttributeBodies &
   Pick<
-    AriaAttributeBodies,
+    AllAriaAttributeBodies,
     "disabled" | "expanded" | "hasPopup" | "posInSet" | "setSize"
   >;
 
@@ -342,7 +345,7 @@ export type MenuitemRoleAriaAttributeBodies = CommandRoleAriaAttributeBodies &
 export type MenuitemcheckboxRoleAriaAttributeBodies =
   MenuitemRoleAriaAttributeBodies &
     Pick<
-      AriaAttributeBodies,
+      AllAriaAttributeBodies,
       "checked" // required
     >;
 
@@ -367,7 +370,7 @@ export type NoteRoleAriaAttributeBodies = SectionRoleAriaAttributeBodies;
 // Superclass role: input
 export type OptionRoleAriaAttributeBodies = InputRoleAriaAttributeBodies &
   Pick<
-    AriaAttributeBodies,
+    AllAriaAttributeBodies,
     | "selected" // required
     | "checked"
     | "posInSet"
@@ -404,7 +407,7 @@ export type ProgressbarRoleAriaAttributeBodies = RangeRoleAriaAttributeBodies &
 // Superclass role: input
 export type RadioRoleAriaAttributeBodies = InputRoleAriaAttributeBodies &
   Pick<
-    AriaAttributeBodies,
+    AllAriaAttributeBodies,
     | "checked" // required
     | "posInSet"
     | "setSize"
@@ -414,7 +417,7 @@ export type RadioRoleAriaAttributeBodies = InputRoleAriaAttributeBodies &
 // Superclass role: select
 export type RadiogroupRoleAriaAttributeBodies = SelectRoleAriaAttributeBodies &
   Pick<
-    AriaAttributeBodies,
+    AllAriaAttributeBodies,
     "errorMessage" | "invalid" | "readOnly" | "required"
   >;
 
@@ -423,7 +426,7 @@ export type RadiogroupRoleAriaAttributeBodies = SelectRoleAriaAttributeBodies &
 // abstract role
 type RangeRoleAriaAttributeBodies = StructureRoleAriaAttributeBodies &
   Pick<
-    AriaAttributeBodies,
+    AllAriaAttributeBodies,
     | "valueMax"
     | "valueMin"
     | "valueNow" // required
@@ -439,7 +442,7 @@ export type RegionRoleAriaAttributeBodies = LandmarkRoleAriaAttributeBodies;
 export type RowRoleAriaAttributeBodies = GroupRoleAriaAttributeBodies &
   WidgetRoleAriaAttributeBodies &
   Pick<
-    AriaAttributeBodies,
+    AllAriaAttributeBodies,
     | "colIndex"
     | "expanded"
     | "level"
@@ -458,14 +461,14 @@ export type RowgroupRoleAriaAttributeBodies = StructureRoleAriaAttributeBodies;
 export type RowheaderRoleAriaAttributeBodies = CellRoleAriaAttributeBodies &
   GridcellRoleAriaAttributeBodies &
   SectionheadRoleAriaAttributeBodies &
-  Pick<AriaAttributeBodies, "sort">;
+  Pick<AllAriaAttributeBodies, "sort">;
 
 // scrollbar role
 // Superclass role: range, widget
 export type ScrollbarRoleAriaAttributeBodies = RangeRoleAriaAttributeBodies &
   WidgetRoleAriaAttributeBodies &
   Pick<
-    AriaAttributeBodies,
+    AllAriaAttributeBodies,
     | "controls" // required
     | "disabled"
     | "orientation"
@@ -492,13 +495,13 @@ type SectionheadRoleAriaAttributeBodies = StructureRoleAriaAttributeBodies;
 // abstract role
 type SelectRoleAriaAttributeBodies = CompositeRoleAriaAttributeBodies &
   GroupRoleAriaAttributeBodies &
-  Pick<AriaAttributeBodies, "orientation">;
+  Pick<AllAriaAttributeBodies, "orientation">;
 
 // separator role (focusable)
 // Superclass role: widget
 export type SeparatorRoleAriaAttributeBodies = WidgetRoleAriaAttributeBodies &
   Pick<
-    AriaAttributeBodies,
+    AllAriaAttributeBodies,
     | "valueNow" // only focusable
     | "disabled" // only focusable
     | "orientation"
@@ -510,14 +513,15 @@ export type SeparatorRoleAriaAttributeBodies = WidgetRoleAriaAttributeBodies &
 // separator role (non-focusable)
 // Superclass role: structure
 export type SeparatorNonFocusableRoleAriaAttributeBodies =
-  StructureRoleAriaAttributeBodies & Pick<AriaAttributeBodies, "orientation">;
+  StructureRoleAriaAttributeBodies &
+    Pick<AllAriaAttributeBodies, "orientation">;
 
 // slider role
 // Superclass role: input, range
 export type SliderRoleAriaAttributeBodies = RangeRoleAriaAttributeBodies &
   InputRoleAriaAttributeBodies &
   Pick<
-    AriaAttributeBodies,
+    AllAriaAttributeBodies,
     "errorMessage" | "hasPopup" | "invalid" | "orientation" | "readOnly"
   >;
 
@@ -527,7 +531,7 @@ export type SpinbuttonRoleAriaAttributeBodies =
     InputRoleAriaAttributeBodies &
     RangeRoleAriaAttributeBodies &
     Pick<
-      AriaAttributeBodies,
+      AllAriaAttributeBodies,
       "errorMessage" | "invalid" | "readOnly" | "required"
     >;
 
@@ -569,7 +573,7 @@ export type SuperscriptRoleAriaAttributeBodies = Omit<
 // Superclass role: checkbox
 export type SwitchRoleAriaAttributeBodies = CheckboxRoleAriaAttributeBodies &
   Pick<
-    AriaAttributeBodies,
+    AllAriaAttributeBodies,
     "checked" // required
   >;
 
@@ -578,19 +582,19 @@ export type SwitchRoleAriaAttributeBodies = CheckboxRoleAriaAttributeBodies &
 export type TabRoleAriaAttributeBodies = SectionheadRoleAriaAttributeBodies &
   WidgetRoleAriaAttributeBodies &
   Pick<
-    AriaAttributeBodies,
+    AllAriaAttributeBodies,
     "disabled" | "expanded" | "hasPopup" | "posInSet" | "selected" | "setSize"
   >;
 
 // table role
 // superclass role: section
 export type TableRoleAriaAttributeBodies = SectionRoleAriaAttributeBodies &
-  Pick<AriaAttributeBodies, "colCount" | "rowCount">;
+  Pick<AllAriaAttributeBodies, "colCount" | "rowCount">;
 
 // tablist role
 // Superclass role: composite
 export type TablistRoleAriaAttributeBodies = CompositeRoleAriaAttributeBodies &
-  Pick<AriaAttributeBodies, "multiSelectable" | "orientation">;
+  Pick<AllAriaAttributeBodies, "multiSelectable" | "orientation">;
 
 // tabpanel role
 // Superclass role: section
@@ -604,7 +608,7 @@ export type TermRoleAriaAttributeBodies = SectionRoleAriaAttributeBodies;
 // Superclass role: input
 export type TextboxRoleAriaAttributeBodies = InputRoleAriaAttributeBodies &
   Pick<
-    AriaAttributeBodies,
+    AllAriaAttributeBodies,
     | "activeDescendant"
     | "autoComplete"
     | "controls"
@@ -628,7 +632,7 @@ export type TimerRoleAriaAttributeBodies = StatusRoleAriaAttributeBodies;
 // toolbar role
 // Superclass role: group
 export type ToolbarRoleAriaAttributeBodies = GroupRoleAriaAttributeBodies &
-  Pick<AriaAttributeBodies, "orientation">;
+  Pick<AllAriaAttributeBodies, "orientation">;
 
 // tooltip role
 // Superclass role: section
@@ -638,7 +642,7 @@ export type TooltipRoleAriaAttributeBodies = SectionRoleAriaAttributeBodies;
 // Superclass role: select
 export type TreeRoleAriaAttributeBodies = SelectRoleAriaAttributeBodies &
   Pick<
-    AriaAttributeBodies,
+    AllAriaAttributeBodies,
     "errorMessage" | "invalid" | "multiSelectable" | "required"
   >;
 
@@ -651,4 +655,4 @@ export type TreegridRoleAriaAttributeBodies = GridRoleAriaAttributeBodies &
 // Superclass role: listitem, option
 export type TreeitemRoleAriaAttributeBodies = ListitemRoleAriaAttributeBodies &
   OptionRoleAriaAttributeBodies &
-  Pick<AriaAttributeBodies, "expanded" | "hasPopup">;
+  Pick<AllAriaAttributeBodies, "expanded" | "hasPopup">;

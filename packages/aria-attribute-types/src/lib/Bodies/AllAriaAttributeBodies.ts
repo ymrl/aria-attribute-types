@@ -1,10 +1,9 @@
-import type { KebabAria, CamelAria } from "../../Utilities";
 type Booleanish = boolean | "true" | "false";
 type Tristate = Booleanish | "mixed";
 type Undefinedable = Booleanish | "undefined";
 type RelevantValue = "additions" | "removals" | "text" | "all";
 
-export type AriaAttributeBodies = {
+export type AllAriaAttributeBodies = {
   activeDescendant?: string;
   atomic?: Booleanish;
   autoComplete?: "none" | "inline" | "list" | "both";
@@ -57,6 +56,3 @@ export type AriaAttributeBodies = {
   valueNow?: number;
   valueText?: string;
 };
-
-export type KebabCaseAriaAttributes = KebabAria<AriaAttributeBodies>;
-export type CamelCaseAriaAttributes = CamelAria<AriaAttributeBodies>;

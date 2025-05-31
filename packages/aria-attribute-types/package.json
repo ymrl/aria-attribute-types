@@ -12,8 +12,8 @@
     "test": "vitest --run",
     "typecheck": "vitest --typecheck --run",
     "typecheck:watch": "vitest --typecheck",
-    "lint": "prettier . --check && eslint .",
-    "lint:fix": "prettier . --write && eslint . --fix",
+    "lint": "prettier src --check && eslint src",
+    "lint:fix": "prettier src --write && eslint src --fix",
     "build": "tsc",
     "dev": "tsc --watch",
     "clean": "rm -rf dist"

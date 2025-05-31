@@ -1,11 +1,8 @@
 import { convertCamelizedAttributes } from "aria-attribute-types";
 import type { ReactNode } from "react";
-import type {
-  CamelCaseLinkRoleAriaAttributes,
-  CamelCaseRoleAttributes,
-} from "aria-attribute-types";
+import type { CamelCaseAria, Role } from "aria-attribute-types";
 
-export const Link = ({
+export const Link = <R extends Role | undefined>({
   children,
   ...props
 }: {
@@ -13,6 +10,7 @@ export const Link = ({
   href: string;
   target?: string;
   className?: string;
-} & (CamelCaseLinkRoleAriaAttributes | CamelCaseRoleAttributes)) => {
+  role?: R;
+} & CamelCaseAria<R extends undefined ? "link" : R>) => {
   return <a {...convertCamelizedAttributes(props)}>{children}</a>;
 };
