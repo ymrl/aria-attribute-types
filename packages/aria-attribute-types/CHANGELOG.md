@@ -1,5 +1,11 @@
 # aria-attribute-types
 
+## 1.0.0
+
+### Major Changes
+
+- [#8](https://github.com/ymrl/aria-attribute-types/pull/8) [`ef91670`](https://github.com/ymrl/aria-attribute-types/commit/ef91670aae9e54322d3ab072337a52dc5ba79df3) Thanks [@ymrl](https://github.com/ymrl)! - Introduce CamelCaseAria (and KebabCaseAria AriaBodies) types using generics, and reduced type declarations
+
 ## 0.0.4
 
 ### Patch Changes
