@@ -1,6 +1,6 @@
 {
   "name": "aria-attribute-types",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Type-safe WAI-ARIA attributes for TypeScript.",
   "homepage": "https://github.com/ymrl/aria-attribute-types",
   "repository": {
