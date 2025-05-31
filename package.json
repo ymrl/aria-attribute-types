@@ -11,6 +11,7 @@
     "dev": "turbo dev",
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
+    "changeset": "changeset",
     "clean": "turbo clean"
   },
   "engines": {
@@ -22,6 +23,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@changesets/cli": "^2.29.4",
     "prettier": "3.5.2",
     "turbo": "^2.5.2"
   }
