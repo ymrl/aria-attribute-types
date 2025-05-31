@@ -12,7 +12,7 @@
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
     "changeset": "changeset",
-    "release": "build && changeset publish",
+    "release": "turbo build && changeset publish",
     "clean": "turbo clean"
   },
   "engines": {
