@@ -39,3 +39,52 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Get current SHA
+        if: ${{ steps.changesets.outputs.published == 'false' && steps.changesets.outputs.hasChangesets == 'true' }}
+        id: set_commit_sha
+        run: echo "SHA=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
+
+      - name: Set Commit Status test=pending
+        uses: myrotvorets/set-commit-status-action@v2.0.1
+        if: ${{ steps.changesets.outputs.published == 'false' && steps.changesets.outputs.hasChangesets == 'true' }}
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          status: "pending"
+          context: test
+          sha: ${{ steps.set_commit_sha.outputs.SHA }}
+
+      - name: Set Commit Status lint=pending
+        uses: myrotvorets/set-commit-status-action@v2.0.1
+        if: ${{ steps.changesets.outputs.published == 'false' && steps.changesets.outputs.hasChangesets == 'true' }}
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          status: "pending"
+          context: lint
+          sha: ${{ steps.set_commit_sha.outputs.SHA }}
+
+      - name: Run test
+        if: ${{ steps.changesets.outputs.published == 'false' && steps.changesets.outputs.hasChangesets == 'true' }}
+        run: pnpm test
+
+      - name: Set Commit Status test=success
+        uses: myrotvorets/set-commit-status-action@v2.0.1
+        if: ${{ steps.changesets.outputs.published == 'false' && steps.changesets.outputs.hasChangesets == 'true' }}
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          status: "success"
+          context: test
+          sha: ${{ steps.set_commit_sha.outputs.SHA }}
+
+      - name: Run lint
+        if: ${{ steps.changesets.outputs.published == 'false' && steps.changesets.outputs.hasChangesets == 'true' }}
+        run: pnpm lint
+
+      - name: Set Commit Status lint=success
+        uses: myrotvorets/set-commit-status-action@v2.0.1
+        if: ${{ steps.changesets.outputs.published == 'false' && steps.changesets.outputs.hasChangesets == 'true' }}
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          status: "success"
+          context: lint
+          sha: ${{ steps.set_commit_sha.outputs.SHA }}
