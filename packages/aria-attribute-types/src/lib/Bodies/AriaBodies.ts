@@ -13,7 +13,7 @@ R extends "alert" | `${string} alert`
   ? B.ArticleRoleAriaAttributeBodies
 : R extends "banner" | `${string} banner`
   ? B.BannerRoleAriaAttributeBodies
-:R extends "blockquote" | `${string} blockquote`
+: R extends "blockquote" | `${string} blockquote`
   ? B.BlockquoteRoleAriaAttributeBodies
 : R extends "button" | `${string} button`
   ? B.ButtonRoleAriaAttributeBodies
@@ -167,4 +167,4 @@ R extends "alert" | `${string} alert`
   ? B.TreegridRoleAriaAttributeBodies
 : R extends "treeitem" | `${string} treeitem`
   ? B.TreeitemRoleAriaAttributeBodies
-                         : never;
+: never;
